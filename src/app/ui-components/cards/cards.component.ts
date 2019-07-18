@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cards',
+  selector: 'cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
@@ -15,5 +15,8 @@ export class CardsComponent implements OnInit {
   consoleLog(): void{
     console.log('this');
   }
+
+
+
 
 }
