@@ -11,7 +11,8 @@ import {
   MatIconModule,
   MatFormFieldModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatMenuModule
 } from "@angular/material";
 import { DragDropModule} from '@angular/cdk/drag-drop';
 
@@ -43,7 +44,8 @@ import { StudyGraphComponent } from "./ui-components/study-graph/study-graph.com
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    DragDropModule
+    DragDropModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

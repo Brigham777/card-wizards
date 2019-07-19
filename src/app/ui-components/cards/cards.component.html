@@ -1,57 +1,51 @@
-<mat-card  style="margin-top:1em; margin-bottom:1em">
-  <mat-card-header>
+<mat-card style="margin-top:1em; margin-bottom:1">
+  <mat-card-header style=" margin-bottom: -1.05em">
     <div
       mat-card-avatar
       class="example-header-image"
       (click)="consoleLog()"
     ></div>
+    <mat-divider
+      [vertical]="true"
+      [ngClass]="
+        headerDividerInset ? 'vertical-divider' : 'vertical-divider-expanded'
+      "
+    ></mat-divider>
+    <!-- MenuButton -->
+    <div>
+      <button
+        mat-button
+        [ngClass]="
+          headerDividerInset ? 'header-button' : 'header-button-expanded'
+        "
+      >
+        <mat-icon [inline]="true">filter_none</mat-icon>
+      </button>
+    </div>
+    <!-- Text -->
     <mat-card-title>Kanji</mat-card-title>
     <mat-card-subtitle>
       <font color="blue">30</font>
       <font color="green"> 30</font>
       <font color="red"> 30</font>
+      <mat-divider inset="{{ headerDividerInset }}"></mat-divider>
     </mat-card-subtitle>
   </mat-card-header>
-
+  <!-- Content -->
   <mat-card-content>
     <mat-expansion-panel class="mat-elevation-z0" hideToggle="true">
-      <mat-expansion-panel-header style="position: absolute; left: 0px; top: 0px; height: 200%; width: 100%; background: 0%">
+      <mat-expansion-panel-header
+        style="position: absolute; left: 0px; top: 0px; height: 100%; width: 80%; background: 0%;"
+        (click)="changeDivider()"
+      >
       </mat-expansion-panel-header>
 
       <study-graph></study-graph>
-
+      <!-- Content Buttons -->
       <mat-action-row>
-        <button mat-raised-button color="primary">Study</button>
         <button mat-raised-button color="primary">Statistics</button>
+        <button mat-raised-button color="primary">Settings</button>
       </mat-action-row>
     </mat-expansion-panel>
-
-    <!-- <study-graph></study-graph> -->
   </mat-card-content>
-  <!-- <mat-divider [inset]="true"></mat-divider>
-  <mat-card-actions>
-    <button mat-flat-button color="primary">Study</button>
-    <button mat-raised-button>Statistics</button>
-    <button mat-raised-button>Settings</button>
-  </mat-card-actions>
-  <mat-card-footer>Left: 50</mat-card-footer> -->
 </mat-card>
-
-<!-- <mat-expansion-panel [expanded]="true">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Personal data
-    </mat-panel-title>
-    <mat-panel-description>
-      Type your name and age
-      <mat-icon>account_circle</mat-icon>
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-
-  <study-graph></study-graph>
-
-  <mat-action-row>
-    <button mat-raised-button color="primary">Study</button>
-    <button mat-raised-button color="primary">Statistics</button>
-  </mat-action-row>
-</mat-expansion-panel> -->

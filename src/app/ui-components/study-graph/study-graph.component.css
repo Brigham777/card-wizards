@@ -1,6 +1,4 @@
-:root {
-  --main: mat-grid-tile.height;
-}
+
 
 mat-grid-tile {
   background: rgba(211, 211, 211, 0.137);
@@ -27,4 +25,8 @@ mat-grid-tile {
   background-color: #0081a1a4;
   display: inline-block;
   vertical-align: -5px;
+}
+.grid {
+  max-width: 50%;
+  padding-top: 10px;
 }

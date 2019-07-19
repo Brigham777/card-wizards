@@ -1,13 +1,16 @@
-<mat-grid-list cols="7" gutterSize="5">
-  <mat-grid-tile *ngFor="let day of studyStatus | slice: -21">
-    <div [ngSwitch]="day">
-      <div *ngSwitchCase="'yes'">
-        <span class="dot-yes"></span>
+<div class='grid'>
+    
+  <mat-grid-list cols="7" gutterSize="5">
+    <mat-grid-tile *ngFor="let day of studyStatus | slice: -21">
+      <div [ngSwitch]="day">
+        <div *ngSwitchCase="'yes'">
+          <span class="dot-yes"></span>
+        </div>
+        <div *ngSwitchCase="'partial'"><span class="dot-partial"></span></div>
+        <div *ngSwitchDefault>
+          <span class="dot-no"></span>
+        </div>
       </div>
-      <div *ngSwitchCase="'partial'"><span class="dot-partial"></span></div>
-      <div *ngSwitchDefault>
-        <span class="dot-no"></span>
-      </div>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
