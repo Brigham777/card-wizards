@@ -14,13 +14,14 @@ import {
   MatNativeDateModule,
   MatMenuModule
 } from "@angular/material";
-import { DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 
 import { AppComponent } from "./app.component";
 import { MainUIComponent } from "./main-ui/main-ui.component";
 import { CardsComponent } from "./ui-components/cards/cards.component";
 import { TopNavComponent } from "./ui-components/top-nav/top-nav.component";
 import { StudyGraphComponent } from "./ui-components/study-graph/study-graph.component";
+import { DeckStatisticsComponent } from './ui-components/deck-statistics/deck-statistics.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { StudyGraphComponent } from "./ui-components/study-graph/study-graph.com
     MainUIComponent,
     CardsComponent,
     TopNavComponent,
-    StudyGraphComponent
+    StudyGraphComponent,
+    DeckStatisticsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,4 +52,4 @@ import { StudyGraphComponent } from "./ui-components/study-graph/study-graph.com
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

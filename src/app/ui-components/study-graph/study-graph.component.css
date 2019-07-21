@@ -1,9 +1,8 @@
-
-
 mat-grid-tile {
   background: rgba(211, 211, 211, 0.137);
   border-radius: 50%;
 }
+
 .dot-yes {
   height: 200px;
   width: 300px;
@@ -11,6 +10,7 @@ mat-grid-tile {
   display: inline-block;
   vertical-align: -5px;
 }
+
 .dot-no {
   box-sizing: border-box;
   height: 200px;
@@ -19,14 +19,11 @@ mat-grid-tile {
   display: inline-block;
   vertical-align: -5px;
 }
+
 .dot-partial {
   height: 200px;
   width: 200px;
   background-color: #0081a1a4;
   display: inline-block;
   vertical-align: -5px;
-}
-.grid {
-  max-width: 50%;
-  padding-top: 10px;
 }

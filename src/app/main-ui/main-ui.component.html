@@ -1,17 +1,52 @@
+<!-- <mat-list>
+  <mat-list-item>
+    <div cdkDrag>
+      <mat-accordion class="example-headers-align">
+        <cards></cards>
+      </mat-accordion>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div cdkDrag>
+      <mat-accordion class="example-headers-align">
+        <cards></cards>
+      </mat-accordion>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div cdkDrag>
+      <mat-accordion class="example-headers-align">
+        <cards></cards>
+      </mat-accordion>
+    </div>
+  </mat-list-item>
+</mat-list> -->
+
+<!-- <div class="middle">
+  <div>
+    <mat-accordion class="example-headers-align">
+      <cards></cards>
+    </mat-accordion>
+  </div>
+  <div>
+    <mat-accordion class="example-headers-align">
+      <cards></cards>
+    </mat-accordion>
+  </div>
+  <div>
+    <mat-accordion class="example-headers-align">
+      <cards></cards>
+    </mat-accordion>
+  </div>
+</div> -->
+
+
+
+
 <div class="middle">
-  <div cdkDrag>
+  <div *ngFor='let deck of decks'>
     <mat-accordion class="example-headers-align">
-      <cards></cards>
-    </mat-accordion>
-  </div>
-  <div cdkDrag>
-    <mat-accordion class="example-headers-align">
-      <cards></cards>
-    </mat-accordion>
-  </div>
-  <div cdkDrag>
-    <mat-accordion class="example-headers-align">
-      <cards></cards>
+      <cards [deck]='deck'></cards>
     </mat-accordion>
   </div>
 </div>

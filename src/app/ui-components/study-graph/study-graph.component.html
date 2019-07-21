@@ -1,6 +1,5 @@
-<div class='grid'>
-    
-  <mat-grid-list cols="7" gutterSize="5">
+<div>
+  <mat-grid-list cols="7" gutterSize="4">
     <mat-grid-tile *ngFor="let day of studyStatus | slice: -21">
       <div [ngSwitch]="day">
         <div *ngSwitchCase="'yes'">
