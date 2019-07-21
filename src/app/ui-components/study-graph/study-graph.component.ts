@@ -42,6 +42,20 @@ export class StudyGraphComponent implements OnInit {
     '6',
     '7',
     '8',
+    '9',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    'yes',
+    'partial',
+    '3',
+    'yes',
+    '5',
+    '6',
+    '7',
+    '8',
     '9'
   ]
 }
