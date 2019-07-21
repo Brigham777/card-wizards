@@ -26,6 +26,7 @@ import { TopNavComponent } from "./ui-components/top-nav/top-nav.component";
 import { StudyGraphComponent } from "./ui-components/study-graph/study-graph.component";
 import { DeckStatisticsComponent } from './ui-components/deck-statistics/deck-statistics.component';
 import { DeckService } from './services/deck.service';
+import { FooterComponent } from './ui-components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DeckService } from './services/deck.service';
     CardsComponent,
     TopNavComponent,
     StudyGraphComponent,
-    DeckStatisticsComponent
+    DeckStatisticsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

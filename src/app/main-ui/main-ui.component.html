@@ -1,52 +1,29 @@
-<!-- <mat-list>
-  <mat-list-item>
-    <div cdkDrag>
-      <mat-accordion class="example-headers-align">
-        <cards></cards>
-      </mat-accordion>
-    </div>
-  </mat-list-item>
-  <mat-list-item>
-    <div cdkDrag>
-      <mat-accordion class="example-headers-align">
-        <cards></cards>
-      </mat-accordion>
-    </div>
-  </mat-list-item>
-  <mat-list-item>
-    <div cdkDrag>
-      <mat-accordion class="example-headers-align">
-        <cards></cards>
-      </mat-accordion>
-    </div>
-  </mat-list-item>
-</mat-list> -->
-
-<!-- <div class="middle">
-  <div>
-    <mat-accordion class="example-headers-align">
-      <cards></cards>
-    </mat-accordion>
+<div class='main-container'>
+  <div class="topnav">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#" style="float:right">Log In</a>
   </div>
-  <div>
-    <mat-accordion class="example-headers-align">
-      <cards></cards>
-    </mat-accordion>
-  </div>
-  <div>
-    <mat-accordion class="example-headers-align">
-      <cards></cards>
-    </mat-accordion>
-  </div>
-</div> -->
 
+  <body>
+      <div *ngFor='let deck of decks'>
+        <mat-accordion>
+          <cards [deck]='deck'></cards>
+        </mat-accordion>
+      </div>
+  </body>
 
+  <footer class="footer">
+    <h2>Footer</h2>
+  </footer>
+</div>
 
-
-<div class="middle">
-  <div *ngFor='let deck of decks'>
-    <mat-accordion class="example-headers-align">
+<!-- For dragging -->
+<!-- <div cdkDropList class="middle"  (cdkDropListDropped)="drop($event)" start="closeAllPanels()">
+  <div *ngFor='let deck of decks' cdkDrag >
+    <mat-accordion class="example-headers-align" #accordion="matAccordion" [multi]='true'>
       <cards [deck]='deck'></cards>
     </mat-accordion>
   </div>
-</div>
+</div> -->

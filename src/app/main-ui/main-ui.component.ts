@@ -1,7 +1,6 @@
 import { DeckService } from './../services/deck.service';
 import { Deck } from './../interfaces/deck';
-import { CardsComponent } from './../ui-components/cards/cards.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
@@ -12,7 +11,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class MainUIComponent implements OnInit {
 
   decks: Deck[];
-
+  
   constructor(private deckService: DeckService) { }
 
   ngOnInit() {
@@ -23,5 +22,15 @@ export class MainUIComponent implements OnInit {
     this.deckService.getDecks()
       .subscribe(decks => (this.decks = decks));
   }
+
+
+
+
+
+
+// for dragging
+  /* drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.decks, event.previousIndex, event.currentIndex);
+  } */
 
 }
