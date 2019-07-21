@@ -1,4 +1,5 @@
-import { Deck } from './../objects/deck';
+import { DeckService } from './../services/deck.service';
+import { Deck } from './../interfaces/deck';
 import { CardsComponent } from './../ui-components/cards/cards.component';
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -10,27 +11,17 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 })
 export class MainUIComponent implements OnInit {
 
-  decks: Deck[] = [];
-  deck1: Deck;
-  deck2: Deck;
-  deck3: Deck;
-  deck4: Deck;
+  decks: Deck[];
 
-  constructor() { }
+  constructor(private deckService: DeckService) { }
 
   ngOnInit() {
-    this.deck1 = new Deck('Kanji', '20', '30', '50');
-    this.deck2 = new Deck('Hirigana', '20', '30', '50');
-    this.deck3 = new Deck('Katakana', '20', '30', '50');
-    this.deck4 = new Deck('Grammar', '20', '30', '50');
-    this.fillDecks();
+    this.getDecks();
   }
 
-  fillDecks(): void {
-    this.decks.push(this.deck1);
-    this.decks.push(this.deck2);
-    this.decks.push(this.deck3);
-    this.decks.push(this.deck4);
+  getDecks() {
+    this.deckService.getDecks()
+      .subscribe(decks => (this.decks = decks));
   }
 
 }

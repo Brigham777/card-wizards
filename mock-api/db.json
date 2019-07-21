@@ -1,0 +1,29 @@
+
+{
+    "decks": [{
+            "deckName": "Kanji",
+            "cardsLearning": "20",
+            "cardsNew": "30",
+            "cardsReview": "50"
+        },
+        {
+            "deckName": "Hirigana",
+            "cardsLearning": "20",
+            "cardsNew": "30",
+            "cardsReview": "50"
+        },
+        {
+            "deckName": "Katakana",
+            "cardsLearning": "20",
+            "cardsNew": "30",
+            "cardsReview": "50"
+        },
+        {
+            "deckName": "Grammar",
+            "cardsLearning": "99",
+            "cardsNew": "30",
+            "cardsReview": "50"
+        }
+    ]
+
+}
