@@ -9,17 +9,10 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./main-ui.component.css']
 })
 export class MainUIComponent implements OnInit {
-
-  decks: Deck[];
   
-  constructor(private deckService: DeckService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getDecks();
   }
 
-  getDecks() {
-    this.deckService.getDecks()
-      .subscribe(decks => (this.decks = decks));
-  }
 }
