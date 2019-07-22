@@ -14,6 +14,7 @@ export class DecksComponent implements OnInit {
 
   ngOnInit() {
     this.getDecks();
+    
   }
 
   getDecks() {

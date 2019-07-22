@@ -1,3 +1,9 @@
-<div *ngFor="let deck of decks">
-  <deck [deck]="deck"></deck>
+<div class="deck-container mat-elevation-z1">
+  <div class='header'>
+    <h1>Decks</h1>
+    <button mat-flat-button class='button'>Add Deck</button>
+  </div>
+  <div *ngFor="let deck of decks" class='decks'>
+    <deck [deck]="deck"></deck>
+  </div>
 </div>

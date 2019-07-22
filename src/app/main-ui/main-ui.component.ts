@@ -1,5 +1,3 @@
-import { DeckService } from './../services/deck.service';
-import { Deck } from './../interfaces/deck';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 

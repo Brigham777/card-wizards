@@ -29,6 +29,8 @@ import { DeckStatisticsComponent } from './ui-components/deck-statistics/deck-st
 import { DeckService } from './services/deck.service';
 import { FooterComponent } from './ui-components/footer/footer.component';
 import { DeckComponent } from './ui-components/decks/deck/deck.component';
+import { AppRoutingModule } from './app-routing.module';
+import { StudyComponent } from './study-components/study/study.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { DeckComponent } from './ui-components/decks/deck/deck.component';
     StudyGraphComponent,
     DeckStatisticsComponent,
     FooterComponent,
-    DeckComponent
+    DeckComponent,
+    StudyComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import { DeckComponent } from './ui-components/decks/deck/deck.component';
     DragDropModule,
     MatMenuModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    AppRoutingModule
   ],
   providers: [
     DeckService,
