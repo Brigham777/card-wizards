@@ -23,7 +23,68 @@
             "cardsLearning": "99",
             "cardsNew": "30",
             "cardsReview": "50"
-        }
+        },
+        {
+            "deckName": "7ILG3O",
+            "cardsLearning": "82",
+            "cardsNew": "41",
+            "cardsReview": "90"
+            },
+            {
+            "deckName": "O5GLR8",
+            "cardsLearning": "89",
+            "cardsNew": "0",
+            "cardsReview": "45"
+            },
+            {
+            "deckName": "M916QF",
+            "cardsLearning": "40",
+            "cardsNew": "28",
+            "cardsReview": "57"
+            },
+            {
+            "deckName": "JDPYX9",
+            "cardsLearning": "73",
+            "cardsNew": "44",
+            "cardsReview": "20"
+            },
+            {
+            "deckName": "C0V180",
+            "cardsLearning": "32",
+            "cardsNew": "44",
+            "cardsReview": "29"
+            },
+            {
+            "deckName": "9CO2AS",
+            "cardsLearning": "48",
+            "cardsNew": "44",
+            "cardsReview": "61"
+            },
+            {
+            "deckName": "3A1F1S",
+            "cardsLearning": "83",
+            "cardsNew": "57",
+            "cardsReview": "31"
+            },
+            {
+            "deckName": "R0IHUB",
+            "cardsLearning": "74",
+            "cardsNew": "81",
+            "cardsReview": "25"
+            },
+            {
+            "deckName": "4UAAUA",
+            "cardsLearning": "86",
+            "cardsNew": "42",
+            "cardsReview": "21"
+            },
+            {
+            "deckName": "GQC6GH",
+            "cardsLearning": "35",
+            "cardsNew": "92",
+            "cardsReview": "42"
+            }
+        
     ]
 
 }
