@@ -1,11 +1,11 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
-  body {
-    margin: 0;
-  }
+body {
+  margin: 0;
+}
 
-  ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }

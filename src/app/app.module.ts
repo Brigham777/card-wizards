@@ -14,7 +14,8 @@ import {
   MatFormFieldModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatMenuModule
+  MatMenuModule,
+  MatToolbarModule
 } from "@angular/material";
 import { DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { HttpClientModule } from '@angular/common/http';
@@ -54,7 +55,8 @@ import { FooterComponent } from './ui-components/footer/footer.component';
     MatNativeDateModule,
     DragDropModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [
     DeckService,

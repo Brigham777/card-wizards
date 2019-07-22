@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  text-size-adjust: auto;
+}
+
+.footer a:hover {
+  color: black;
+}

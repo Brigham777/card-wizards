@@ -22,15 +22,4 @@ export class MainUIComponent implements OnInit {
     this.deckService.getDecks()
       .subscribe(decks => (this.decks = decks));
   }
-
-
-
-
-
-
-// for dragging
-  /* drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.decks, event.previousIndex, event.currentIndex);
-  } */
-
 }

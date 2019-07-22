@@ -1,29 +1,15 @@
 <div class='main-container'>
-  <div class="topnav">
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#" style="float:right">Log In</a>
-  </div>
+  <top-nav></top-nav>
 
   <body>
-      <div *ngFor='let deck of decks'>
-        <mat-accordion>
-          <cards [deck]='deck'></cards>
-        </mat-accordion>
-      </div>
+    <div *ngFor='let deck of decks'>
+      <mat-accordion>
+        <cards [deck]='deck'></cards>
+      </mat-accordion>
+    </div>
   </body>
 
   <footer class="footer">
-    <h2>Footer</h2>
+    <page-footer></page-footer>
   </footer>
 </div>
-
-<!-- For dragging -->
-<!-- <div cdkDropList class="middle"  (cdkDropListDropped)="drop($event)" start="closeAllPanels()">
-  <div *ngFor='let deck of decks' cdkDrag >
-    <mat-accordion class="example-headers-align" #accordion="matAccordion" [multi]='true'>
-      <cards [deck]='deck'></cards>
-    </mat-accordion>
-  </div>
-</div> -->

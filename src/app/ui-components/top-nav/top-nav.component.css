@@ -1,4 +1,21 @@
-.top-nav {
-    height: 44px;
-    background-color: aqua;
-}
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(117, 117, 117);
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
