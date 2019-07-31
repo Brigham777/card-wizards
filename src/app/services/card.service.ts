@@ -15,17 +15,13 @@ import {
 } from "./../services/http-error-handler.service";
 
 @Injectable()
-export class DeckService {
-  decksUrl = "http://localhost:54414/api/Deck"; // URL to web api
+export class CardService {
+  cardsUrl = "http://localhost:54414/api/Card"; // URL to web api
 
 
   constructor(private http: HttpClient) {}
 
-  getDecks(): Observable<Deck[]> {
-    return this.http.get<Deck[]>(this.decksUrl);
-  }
-
-  getCards(id: string): Observable<Deck[]> {
-    return this.http.get<Deck[]>(this.decksUrl + "/" + id);
+  getCards(id: string): Observable<Card[]> {
+    return this.http.get<Card[]>(this.cardsUrl + "/" + id);
   }
 }

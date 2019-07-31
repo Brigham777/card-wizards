@@ -1,10 +1,8 @@
 import { Card } from './card';
 export interface Deck {
-    id: string;
+    id: number;
     deckName: string;
-    cardsLearning: string;
-    cardsNew: string;
-    cardsReview: string;
-    cards: Card[];
-
+    cardsLearning: number;
+    cardsNew: number;
+    cardsReview: number;
 }

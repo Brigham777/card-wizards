@@ -27,6 +27,7 @@ import { TopNavComponent } from "./ui-components/top-nav/top-nav.component";
 import { StudyGraphComponent } from "./ui-components/study-graph/study-graph.component";
 import { DeckStatisticsComponent } from './ui-components/deck-statistics/deck-statistics.component';
 import { DeckService } from './services/deck.service';
+import { CardService } from './services/card.service';
 import { FooterComponent } from './ui-components/footer/footer.component';
 import { DeckComponent } from './ui-components/decks/deck/deck.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -66,6 +67,7 @@ import { StudyComponent } from './study-components/study/study.component';
   ],
   providers: [
     DeckService,
+    CardService,
     HttpErrorHandler,
     MessageService
   ],

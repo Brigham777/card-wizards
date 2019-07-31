@@ -2,6 +2,8 @@ import { Deck } from './../../interfaces/deck';
 import { Card } from './../../interfaces/card';
 import { Component, OnInit } from '@angular/core';
 import { DeckService } from "./../../services/deck.service";
+import { CardService } from "./../../services/card.service";
+
 import { ActivatedRoute } from "@angular/router";
 import { getDefaultService } from 'selenium-webdriver/opera';
 
@@ -12,24 +14,20 @@ import { getDefaultService } from 'selenium-webdriver/opera';
 })
 export class StudyComponent implements OnInit {
 
-  decks: Deck[];
   cards: Card[];
   id: string;
 
-  constructor(private deckService: DeckService, private route: ActivatedRoute) { }
+  constructor(private cardService: CardService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get("id");
-    this.getDecks();
-    console.log(this.cards[1])
+    //this.getDecks();
+    //console.log(this.cards[1])
     
   }
 
   getDecks() {
-    this.deckService.getDecks().subscribe(decks => (
-      this.decks = decks,
-      this.decks[0].cards = this.cards
-      ));
+    this.cardService.getCards(this.id).subscribe(cards => ( this.cards = cards ));
   }
 
 }
