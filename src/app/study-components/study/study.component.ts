@@ -21,13 +21,13 @@ export class StudyComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get("id");
-    //this.getDecks();
+    this.getCards(this.id);
     //console.log(this.cards[1])
     
   }
 
-  getDecks() {
-    this.cardService.getCards(this.id).subscribe(cards => ( this.cards = cards ));
+  getCards(id: string) {
+    this.cardService.getCards(id).subscribe(cards => ( this.cards = cards ));
   }
 
 }

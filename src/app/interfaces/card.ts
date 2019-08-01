@@ -1,7 +1,7 @@
 export interface Card {
-    cardID: string;
-    deckID: string;
-    learningStage: string;
+    cardID: number;
+    deckID: number;
+    learningStage: number;
     dueDate: Date;
     cardValues: CardValue[];
 }
