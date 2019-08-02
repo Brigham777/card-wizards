@@ -9,3 +9,32 @@ body {
   width: 0px;
   background: transparent;
 }
+
+.green-buffer .mat-progress-bar-buffer {
+  background: rgb(159, 190, 159);
+}
+.green-progress .mat-progress-bar-fill::after {
+  background-color: rgb(124,170,152) !important;
+}
+.blue-buffer .mat-progress-bar-buffer {
+  background: rgb(140, 140, 189);
+}
+.blue-progress .mat-progress-bar-fill::after {
+  background-color: rgb(119,158,203) !important;
+}
+.red-buffer .mat-progress-bar-buffer {
+  background: rgb(196, 157, 157);
+}
+.red-progress .mat-progress-bar-fill::after {
+  background-color: rgb(239,92,78) !important;
+}
+
+.color-green {
+  color: rgb(159, 190, 159);
+}
+.color-blue {
+  color: rgb(140, 140, 189);
+}
+.color-red {
+  color: rgb(239,92,78);
+}

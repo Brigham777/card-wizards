@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <mat-card-header>
+    <!-- <mat-card-title class="headers">Dog Breed</mat-card-title> -->
+  </mat-card-header>
+
+  <mat-card-content class="card-body">
+    <!-- style="font-size: 5.4vmin;" -->
+
+    <div>
+      <div
+        *ngFor="let cardItem of curCardValues"
+        [style.font-size.vmin]="cardItem.fontSize"
+        style="flex-grow: 1"
+      >
+        <font *ngIf="cardItem.onFront == frontShowing" 
+          >{{ cardItem.valueTitle }}: {{ cardItem.value }}</font
+        >
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-divider inset="true"></mat-divider>
+  <mat-card-actions class="button-box">
+    <button *ngIf="frontShowing" mat-button class="buttons" (click)="flipCard()">Flip</button>
+    <button *ngIf="!frontShowing" mat-button class="buttons" (click)="rateCard()">Hard(10m)</button>
+    <button *ngIf="!frontShowing" mat-button class="buttons" (click)="rateCard()">Good(1d)</button>
+    <button *ngIf="!frontShowing" mat-button class="buttons" (click)="rateCard()">Easy(5d)</button>
+  </mat-card-actions>
+</mat-card>

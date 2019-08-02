@@ -1,0 +1,11 @@
+.study-container {
+    margin-top: 10px;
+  margin-bottom: 10px;
+  height: calc(100vh - 144px);
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+    flex-grow: 1;
+}

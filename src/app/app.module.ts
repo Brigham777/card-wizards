@@ -16,10 +16,12 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatMenuModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatProgressBarModule
 } from "@angular/material";
 import { DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { HttpClientModule } from '@angular/common/http';
+import {AngularFittextModule} from 'angular-fittext';
 
 import { AppComponent } from "./app.component";
 import { MainUIComponent } from "./main-ui/main-ui.component";
@@ -32,6 +34,8 @@ import { FooterComponent } from './ui-components/footer/footer.component';
 import { DeckComponent } from './ui-components/decks/deck/deck.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StudyComponent } from './study-components/study/study.component';
+import { CardComponent } from './study-components/card/card.component';
+import { StudyProgressComponent } from './study-components/study-progress/study-progress.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,9 @@ import { StudyComponent } from './study-components/study/study.component';
     DeckStatisticsComponent,
     FooterComponent,
     DeckComponent,
-    StudyComponent
+    StudyComponent,
+    CardComponent,
+    StudyProgressComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +69,9 @@ import { StudyComponent } from './study-components/study/study.component';
     MatMenuModule,
     HttpClientModule,
     MatToolbarModule,
-    AppRoutingModule
+    MatProgressBarModule,
+    AppRoutingModule,
+    AngularFittextModule
   ],
   providers: [
     DeckService,

@@ -1,4 +1,11 @@
-<div *ngFor="let card of cards">
-  test
-  {{ card.cardID }}
+<div class="study-container">
+  <div>
+    <study-progress></study-progress>
+  </div>
+
+  <!-- <div *ngFor="let card of cards">
+    test
+    {{ card.cardID }}
+  </div> -->
+  <study-card class="card" cards='cards'></study-card>
 </div>
