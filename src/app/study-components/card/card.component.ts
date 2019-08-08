@@ -7,10 +7,24 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./card.component.css"]
 })
 export class CardComponent implements OnInit {
-  cards: Card[];
-  curCard: number;
+  cards: Card[]; // remove
+  curCard: number; // remove
   curCardValues: CardValue[];
   frontShowing: boolean;
+
+  // study time modifiers
+  hard: string;
+  good: string;
+  easy: string;
+
+  // TODO: Extract into deck settings object.
+  // number of new cards studied
+  cardsPlanted: number;
+  // study limit for new cards
+  studyLimit: number;
+
+  // has the user reached max new cards
+  studyComplete: boolean;
 
   constructor() {}
 
@@ -85,9 +99,20 @@ export class CardComponent implements OnInit {
     this.curCard = 0;
     this.curCardValues = this.cards[this.curCard].cardValues;
     this.frontShowing = true;
+
+    this.hard = "10m";
+    this.good = "1d";
+    this.easy = "7d";
+
+    this.studyComplete = false;
+
+    this.deckSettings();
+
+    this.popCard();
   }
 
   flipCard(): void {
+    // update new study dates
     this.frontShowing = false;
   }
 
@@ -95,5 +120,15 @@ export class CardComponent implements OnInit {
     this.curCard++;
     this.frontShowing = true;
     this.curCardValues = this.cards[this.curCard].cardValues;
+  }
+
+  popCard(): void {
+    // if hit new card limit. display message set studyComplete to true
+    // call API to get most overdue card
+    // if new card increment cards planted
+  }
+
+  deckSettings(): void {
+    // call API to get number of learning, new, review cards, card limit
   }
 }
