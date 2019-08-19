@@ -9,6 +9,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class DecksComponent implements OnInit {
   decks: Deck[];
+  
 
   constructor(private deckService: DeckService) {}
 
@@ -19,5 +20,9 @@ export class DecksComponent implements OnInit {
 
   getDecks() {
     this.deckService.getDecks().subscribe(decks => (this.decks = decks));
+  }
+
+  onFileSelected(event) {
+    this.deckService.postDeck(<File>event.target.files[0]);
   }
 }

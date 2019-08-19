@@ -1,7 +1,8 @@
 <div class="deck-container mat-elevation-z1">
   <div class='header'>
     <h1>Decks</h1>
-    <button mat-flat-button class='button'>Add Deck</button>
+    <input style="display: none" type="file" (change)="onFileSelected($event)" #fileInput>
+    <button mat-flat-button class='button' (click)="fileInput.click()">Add Deck</button>
   </div>
   <div *ngFor="let deck of decks" class='decks'>
     <deck [deck]="deck"></deck>

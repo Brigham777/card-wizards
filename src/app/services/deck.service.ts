@@ -25,7 +25,12 @@ export class DeckService {
     return this.http.get<Deck[]>(this.decksUrl);
   }
 
-  getCards(id: string): Observable<Deck[]> {
-    return this.http.get<Deck[]>(this.decksUrl + "/" + id);
+  postDeck(file: File) {
+    const fd = new FormData();
+    fd.append(file.type, file, file.name);
+    this.http.post(this.decksUrl + "/AddDeck", fd)
+    .subscribe(res => {
+      console.log(res)
+    });
   }
 }

@@ -22,4 +22,6 @@ export class DeckComponent implements OnInit {
       this.headerDividerInset = true;
     }
   }
+
+  
 }

@@ -21,7 +21,6 @@ import {
 } from "@angular/material";
 import { DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { HttpClientModule } from '@angular/common/http';
-import {AngularFittextModule} from 'angular-fittext';
 
 import { AppComponent } from "./app.component";
 import { MainUIComponent } from "./main-ui/main-ui.component";
@@ -70,9 +69,8 @@ import { StudyProgressComponent } from './study-components/study-progress/study-
     HttpClientModule,
     MatToolbarModule,
     MatProgressBarModule,
-    AppRoutingModule,
-    AngularFittextModule
-  ],
+    AppRoutingModule
+    ],
   providers: [
     DeckService,
     CardService,
